@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+</head>
+<body>
+
+    <h1>Event Registration Form</h1>
+
+    <form id="eventForm">
+
+        <label>Name:</label><br>
+        <input type="text" name="username"><br>
+        <small id="nameError" style="color:red;"></small>
+        <br>
+
+        <label>Email:</label><br>
+        <input type="text" name="email"><br>
+        <small id="emailError" style="color:red;"></small>
+        <br>
+
+        <label>Select Event:</label><br>
+        <select name="event">
+            <option value="">--Select--</option>
+            <option value="Music Night">Music Night</option>
+            <option value="Tech Meetup">Tech Meetup</option>
+            <option value="Art Workshop">Art Workshop</option>
+        </select><br>
+        <small id="eventError" style="color:red;"></small>
+
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="successMsg" style="color:green;"></p>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
