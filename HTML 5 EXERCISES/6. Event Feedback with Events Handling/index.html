@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        #fee {
+            color: green;
+            font-weight: bold;
+        }
+
+        #charCount {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+
+        /* onblur event */
+        function validatePhone() {
+
+            let phone =
+                document.getElementById("phone").value;
+
+            if (phone.length != 10) {
+                alert("Phone number must contain exactly 10 digits");
+            }
+        }
+
+        /* onchange event */
+        function showFee() {
+
+            let event =
+                document.getElementById("eventType").value;
+
+            let fee = "";
+
+            if (event == "Music Festival")
+                fee = "₹100";
+
+            else if (event == "Sports Meet")
+                fee = "₹150";
+
+            else if (event == "Technology Expo")
+                fee = "₹200";
+
+            document.getElementById("fee").innerHTML =
+                "Event Fee: " + fee;
+        }
+
+        /* onclick event */
+        function submitFeedback() {
+
+            alert("Feedback Submitted Successfully!");
+        }
+
+        /* ondblclick event */
+        function enlargeImage(img) {
+
+            if (img.style.width == "350px") {
+
+                img.style.width = "200px";
+                img.style.height = "150px";
+
+            } else {
+
+                img.style.width = "350px";
+                img.style.height = "250px";
+            }
+        }
+
+        /* keyboard event */
+        function countCharacters() {
+
+            let count =
+                document.getElementById("feedback").value.length;
+
+            document.getElementById("charCount").innerHTML =
+                "Characters Typed: " + count;
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Scenario -->
+
+    <h1>Local Community Event Portal</h1>
+
+    <div class="container">
+
+        <h2>Event Feedback Form</h2>
+
+        <p>
+            Residents can share their feedback about community
+            events. The portal provides real-time interaction
+            using various JavaScript events.
+        </p>
+
+        <hr>
+
+        <!-- onblur -->
+
+        <label>Phone Number:</label>
+
+        <input type="text"
+               id="phone"
+               placeholder="Enter 10-digit phone number"
+               onblur="validatePhone()">
+
+        <!-- onchange -->
+
+        <label>Select Event:</label>
+
+        <select id="eventType"
+                onchange="showFee()">
+
+            <option>Select Event</option>
+
+            <option>Music Festival</option>
+
+            <option>Sports Meet</option>
+
+            <option>Technology Expo</option>
+
+        </select>
+
+        <p id="fee"></p>
+
+        <hr>
+
+        <!-- ondblclick -->
+
+        <h3>Event Image</h3>
+
+        <p>Double-click the image to enlarge it.</p>
+
+        <img src="event.jpg"
+             alt="Community Event"
+             ondblclick="enlargeImage(this)">
+
+        <hr>
+
+        <!-- keyboard event -->
+
+        <label>Feedback:</label>
+
+        <textarea id="feedback"
+                  rows="5"
+                  placeholder="Enter your feedback"
+                  onkeyup="countCharacters()">
+        </textarea>
+
+        <p id="charCount">
+            Characters Typed: 0
+        </p>
+
+        <hr>
+
+        <!-- onclick -->
+
+        <button onclick="submitFeedback()">
+            Submit Feedback
+        </button>
+
+    </div>
+
+</body>
+
+</html>

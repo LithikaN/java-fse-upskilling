@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Video Invite</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 30px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        let formSubmitted = false;
+
+        /* oncanplay event */
+
+        function videoReady() {
+
+            document.getElementById("message").innerHTML =
+                "Video ready to play";
+
+        }
+
+        function submitRegistration() {
+
+            formSubmitted = true;
+
+            alert("Registration Submitted Successfully!");
+
+        }
+
+        /* onbeforeunload event */
+
+        window.onbeforeunload = function () {
+
+            if (!formSubmitted) {
+
+                return "Your registration is not completed. Are you sure you want to leave this page?";
+
+            }
+
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Scenario -->
+
+    <h1>Local Community Event Portal</h1>
+
+    <div class="container">
+
+        <h2>Community Event Video Invitation</h2>
+
+        <p>
+            Watch the promotional video to learn more about
+            upcoming community events, cultural programs,
+            and celebrations before registering.
+        </p>
+
+        <hr>
+
+        <!-- Video -->
+
+        <video width="600"
+               controls
+               oncanplay="videoReady()">
+
+            <source src="event.mp4"
+                    type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+        <p id="message"></p>
+
+        <hr>
+
+        <h3>Event Registration</h3>
+
+        <p>
+            After watching the invitation video,
+            click the button below to confirm your participation.
+        </p>
+
+        <button onclick="submitRegistration()">
+            Submit Registration
+        </button>
+
+    </div>
+
+</body>
+
+</html>

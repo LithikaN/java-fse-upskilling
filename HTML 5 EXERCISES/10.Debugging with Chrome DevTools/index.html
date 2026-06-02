@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging with Chrome DevTools</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+
+        function calculateFee() {
+
+            let tickets = 2;
+            let feePerTicket = 100;
+
+            let totalFee = tickets * feePerTicket;
+
+            console.log("Tickets:", tickets);
+            console.log("Fee Per Ticket:", feePerTicket);
+            console.log("Total Fee:", totalFee);
+
+            alert("Total Fee = ₹" + totalFee);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Local Community Event Portal</h1>
+
+    <div class="box">
+
+        <h2>Debugging Demo</h2>
+
+        <p>
+            Click the button to calculate the event fee.
+            Use Chrome DevTools to inspect styles and debug JavaScript.
+        </p>
+
+        <button onclick="calculateFee()">
+            Calculate Fee
+        </button>
+
+    </div>
+
+</body>
+
+</html>
