@@ -1,0 +1,38 @@
+/* Link Styling */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style-type: none;
+}
+
+.nav-menu li {
+    display: inline;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Event List */
+.event-list {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.event-list li {
+    padding: 5px;
+    margin: 5px;
+}

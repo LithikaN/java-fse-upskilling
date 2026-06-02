@@ -1,0 +1,29 @@
+/* Event Card Styling */
+.eventCard {
+    border: 2px solid blue;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Highlight Form Field */
+.selectedField {
+    outline: 3px solid red;
+}
+
+/* Visibility Hidden Example */
+.hiddenBox {
+    visibility: hidden;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+/* Display None Example */
+.noneBox {
+    display: none;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 20px;
+    background-color: lightgray;
+}

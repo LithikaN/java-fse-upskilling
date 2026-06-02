@@ -1,0 +1,91 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 2vh;
+}
+
+/* Navigation */
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 2%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Flexbox Layout (Bonus) */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 3vh auto;
+}
+
+.event-card {
+    width: 40%;
+    border: 1px solid gray;
+    padding: 2vw;
+    margin: 1vw;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+p {
+    font-size: 1.2vw;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+
+    /* Stack Navigation Vertically */
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Stack Cards */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 90%;
+    }
+
+    /* Reduce Font Sizes */
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    /* Reduce Image Size */
+    .event-card img {
+        width: 80%;
+    }
+}

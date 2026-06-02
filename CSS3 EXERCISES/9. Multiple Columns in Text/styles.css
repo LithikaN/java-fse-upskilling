@@ -1,0 +1,14 @@
+/* Page Heading */
+h1 {
+    text-align: center;
+}
+
+/* Newspaper Style Community Bulletin */
+.news-article {
+    width: 800px;
+    margin: auto;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    text-align: justify;
+}

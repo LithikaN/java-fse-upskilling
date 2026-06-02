@@ -1,0 +1,19 @@
+/* Header Styles */
+header {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Section Styles */
+section {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+/* Text Styles */
+p {
+    font-size: 16px;
+}

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.event-card {
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.event-card img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links li {
+        display: block;
+    }
+
+    .event-card {
+        width: 90%;
+    }
+}
